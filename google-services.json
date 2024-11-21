@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "539629256311",
+    "project_id": "habitos-tp3",
+    "storage_bucket": "habitos-tp3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:539629256311:android:7849d2171b16bdfa79d072",
+        "android_client_info": {
+          "package_name": "com.miapp.tp3habitos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY6UKB0EzxF2r4nFpwr3lI7h3-4D5PFFY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
