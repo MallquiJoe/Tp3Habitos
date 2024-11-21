@@ -29,7 +29,7 @@ const PantallaCrearCuenta = ({ navigation }) => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
       Alert.alert('Cuenta creada', 'Tu cuenta ha sido creada exitosamente.');
-      navigation.replace('Login'); // Redirige al login
+      navigation.replace('Login'); 
     } catch (error) {
       // Manejo de errores específicos de Firebase
       if (error.code === 'auth/email-already-in-use') {
@@ -59,8 +59,7 @@ const PantallaCrearCuenta = ({ navigation }) => {
           setError(''); // Limpia el mensaje de error mientras se escribe
         }}
         keyboardType="email-address"
-        autoCapitalize="none"
-      />
+        autoCapitalize="none"/>
       <TextInput
         style={styles.input}
         placeholder="Contraseña"
@@ -69,8 +68,7 @@ const PantallaCrearCuenta = ({ navigation }) => {
           setPassword(text);
           setError(''); // Limpia el mensaje de error mientras se escribe
         }}
-        secureTextEntry
-      />
+        secureTextEntry/>
 
       {error ? <Text style={styles.errorText}>{error}</Text> : null}
 

@@ -24,7 +24,7 @@ const PantallaInicio = () => {
       };
 
       fetchUserHabits();
-    }, []) // Se ejecuta cada vez que la pantalla de inicio se enfoca
+    }, [])
   );
 
   // Función para eliminar un hábito
@@ -33,7 +33,7 @@ const PantallaInicio = () => {
       await eliminarHabito(auth.currentUser.uid, habitId);
       // Recargar hábitos después de eliminar uno
       const updatedHabits = await getHabitos(auth.currentUser.uid);
-      setHabitos(updatedHabits); // Actualiza la lista de hábitos
+      setHabitos(updatedHabits); 
     } catch (error) {
       console.error('Error al eliminar el hábito: ', error);
     }
@@ -46,7 +46,7 @@ const PantallaInicio = () => {
       await editarHabito(auth.currentUser.uid, habitId, { completada: !completada });
       // Recargar hábitos después de actualizar el estado
       const updatedHabits = await getHabitos(auth.currentUser.uid);
-      setHabitos(updatedHabits); // Actualiza la lista de hábitos
+      setHabitos(updatedHabits); 
     } catch (error) {
       console.error('Error al actualizar el estado de completada:', error);
     }
@@ -55,7 +55,7 @@ const PantallaInicio = () => {
   const handleCerrarSesion = async () => {
     try {
       await auth.signOut();
-      navigation.navigate('Login');  // Redirige a la pantalla de inicio de sesión
+      navigation.navigate('Login'); 
     } catch (error) {
       console.error('Error al cerrar sesión:', error);
     }
@@ -78,7 +78,7 @@ const PantallaInicio = () => {
             <Card key={habito.id} style={styles.card}>
               <Card.Content>
                 <Text style={styles.cardTitle}>{habito.nombre}</Text>
-                <Text style={styles.cardText}>Categoría: {habito.nivel}</Text>
+                <Text style={styles.cardText}>Prioridad: {habito.nivel}</Text>
                 <Text style={styles.cardStatus}>
                   {habito.completada ? 'Completada' : 'No completada'}
                 </Text>
@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: '#f4f4f9',
+    backgroundColor: '#f0f8ff',
     position: 'relative',
   },
   header: {

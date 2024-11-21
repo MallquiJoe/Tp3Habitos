@@ -18,7 +18,7 @@ const PantallaLogin = ({ navigation }) => {
   };
 
   const handleCrearCuenta = () => {
-    navigation.navigate('CrearCuenta');  // Navegar a la pantalla de registro
+    navigation.navigate('CrearCuenta');
   };
 
   return (
